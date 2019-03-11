@@ -19,6 +19,7 @@ class AuthorDetail extends Component {
     this.getAuthor();
   }
 
+  //refetch data "is this update happened bacause Id ha changed? if yes get the new author"
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.authorID !== this.props.match.params.authorID) {
       this.getAuthor();
